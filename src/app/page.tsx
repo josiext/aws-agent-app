@@ -20,7 +20,7 @@ export default function Home() {
   };
 
   return (
-    <div className="flex flex-col gap-2 w-full items-center justify-center min-h-screen font-mono text-sm lg:flex">
+    <div className="flex flex-col gap-2 w-full max-w-md mx-auto items-center justify-center min-h-screen font-mono text-sm">
       <form onSubmit={handleChat} className="flex flex-col gap-1">
         <input
           className="w-full h-10 px-3 text-black placeholder-gray-600 border rounded-lg focus:shadow-outline"
@@ -29,17 +29,17 @@ export default function Home() {
           name="session"
         />
         <textarea
-          className="w-full h-10 px-3 text-black placeholder-gray-600 border rounded-lg focus:shadow-outline"
+          className="w-full h-16 px-3 text-black placeholder-gray-600 border rounded-lg focus:shadow-outline"
           placeholder="Pregunta..."
           name="prompt"
         />
-        <button className="px-4 py-2 ml-2 text-white bg-blue-500 rounded-lg">
+        <button className="px-4 py-2 text-white bg-blue-500 rounded-lg">
           Search
         </button>
       </form>
 
-      <div className="flex flex-col mt-4 lg:mt-0 p-2">
-        <h2 className="text-lg font-bold">Chat Response</h2>
+      <div className="flex flex-col mt-4 p-2">
+        <h2 className="text-lg font-bold">Chat Response:</h2>
         <div className="flex flex-col mt-2">
           <p className="text-sm">{isLoading ? "Loading..." : chatResponse}</p>
         </div>
