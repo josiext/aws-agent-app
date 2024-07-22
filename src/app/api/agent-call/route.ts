@@ -10,7 +10,6 @@ export async function POST(request: Request) {
   const prompt = formData.get("prompt");
 
   const sessionId = "session-1";
-  console.log("aqui", prompt);
 
   const client = new BedrockAgentRuntimeClient({
     region: process.env.AGENT_REGION,
